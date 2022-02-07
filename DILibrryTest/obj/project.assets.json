@@ -882,6 +882,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "DependencyInjection/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DependencyInjection.dll": {}
+        }
       }
     }
   },
@@ -3844,10 +3854,16 @@
         "system.xml.xdocument.4.0.11.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "DependencyInjection/1.0.0": {
+      "type": "project",
+      "path": "../DependencyInjection/DependencyInjection.csproj",
+      "msbuildProject": "../DependencyInjection/DependencyInjection.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "DependencyInjection >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "NUnit >= 3.13.2",
       "NUnit3TestAdapter >= 4.0.0",
@@ -3885,7 +3901,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Dasha_2\\RiderProjects\\DependencyInjectionContainer\\DependencyInjection\\DependencyInjection.csproj": {
+              "projectPath": "C:\\Users\\Dasha_2\\RiderProjects\\DependencyInjectionContainer\\DependencyInjection\\DependencyInjection.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
