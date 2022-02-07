@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{13397ABF-305D-48B6-8ADF-45ACBFF79C12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DILibrryTest", "DILibrryTest\DILibrryTest.csproj", "{62C35F3D-2728-490A-87CF-250D50DC8789}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{13397ABF-305D-48B6-8ADF-45ACBFF79C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13397ABF-305D-48B6-8ADF-45ACBFF79C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13397ABF-305D-48B6-8ADF-45ACBFF79C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C35F3D-2728-490A-87CF-250D50DC8789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C35F3D-2728-490A-87CF-250D50DC8789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C35F3D-2728-490A-87CF-250D50DC8789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C35F3D-2728-490A-87CF-250D50DC8789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

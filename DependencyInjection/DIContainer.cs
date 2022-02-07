@@ -27,6 +27,12 @@ namespace DependencyInjection
             }
             
             var actualType = servInfo.ImplementationType ?? servInfo.ServiceType;
+            
+            if (actualType.IsAbstract || actualType.IsInterface)
+            {
+                throw new Exception("Cannot instantiate abstract classes or interfaces");
+            }
+            
             var constructorInfo = actualType.GetConstructors().First();
             var parameters = constructorInfo.GetParameters().Select(x => GetService(x.ParameterType)).ToArray();
             
