@@ -9,7 +9,7 @@ namespace DependencyInjectionContainer
         {
             var configuration = new DependencyConfiguration();
             
-            configuration.RegisterSingleton<>();
+            configuration.RegisterSingleton<TService>();
             
             var container = configuration.GenerateContainer();
             

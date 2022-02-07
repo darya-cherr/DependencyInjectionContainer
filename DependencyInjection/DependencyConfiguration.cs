@@ -8,7 +8,7 @@ namespace DependencyInjection
         
         public void RegisterSingleton<TService, TImplementation>()
         {
-            _servicesInfo.Add(new ServiceInfo(typeof(TService), typeof(TImplementation)));
+            _servicesInfo.Add(new ServiceInfo(typeof(TService), typeof(TImplementation), ServiceLifetime.Singleton));
         }
         
         
