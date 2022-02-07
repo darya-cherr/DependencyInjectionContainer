@@ -26,6 +26,31 @@ public class Tests
         Assert.AreEqual(typeof(AbstractServiceImpl), serviceFirst.GetType());
     }
     
+    [Test]
+    public void ResolveRecursiveDependency()
+    {
+        _configuration.RegisterSingleton<IService, Service3>();
+        _configuration.RegisterSingleton<IRepository, Repository1>();
+        
+        var container = _configuration.GenerateContainer();
+        IService service = (IService)container.GetService<IService>();
+
+        Assert.AreEqual( typeof(Service3), service.GetType());
+    }
+    
+    [Test]
+    public void ResolveTransientCreating()
+    {
+        _configuration.RegisterTransient<IService, Service1>();
+            
+        var container = _configuration.GenerateContainer();
+        object service1 = container.GetService<IService>();
+        object service2 = container.GetService<IService>();
+
+        Assert.AreNotEqual( service1, service2);
+    }
+    
+    
     
     
 }
