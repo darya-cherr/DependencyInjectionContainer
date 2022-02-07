@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,15 +7,32 @@ namespace DependencyInjection
 {
     public class DIContainer
     {
-        private List<ServiceInfo> _servicesInfo;
-        public DIContainer(List<ServiceInfo> servicesInfo)
+        private Dictionary<Type, List<ServiceInfo>> _servicesInfo;
+        
+        public DIContainer(Dictionary<Type, List<ServiceInfo>> servicesInfo)
         {
             _servicesInfo = servicesInfo;
         }
 
         public object GetService(Type serviceType)
         {
-            var servInfo = _servicesInfo.SingleOrDefault(x => x.ServiceType == serviceType);
+            if (typeof(IEnumerable).IsAssignableFrom(serviceType))
+            { 
+                Type genericType = serviceType.GetGenericArguments()[0];
+                if (_servicesInfo.ContainsKey(genericType))
+                {
+                    List<Object> list = new List<object>();
+                    foreach (var implementation in _servicesInfo[genericType])
+                    {
+                        list.Add(GetService(implementation.ServiceType));
+                    }
+                    return (Object)list.AsEnumerable();
+                }
+            }
+
+            
+            var servInfo =_servicesInfo[serviceType].First(x => x.Implementation == null);
+          
             
             if (servInfo == null)
             {
@@ -45,10 +63,10 @@ namespace DependencyInjection
             
             return instance;
         }
-
-        public T GetService<T>()
+        
+        public object GetService<Object>()
         {
-            return (T)GetService(typeof(T));
+            return (object)GetService(typeof(Object));
         }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using DependencyInjection;
 using NUnit.Framework;
 using static DILibrryTest.TestClasses;
@@ -50,7 +52,22 @@ public class Tests
         Assert.AreNotEqual( service1, service2);
     }
     
-    
+    [Test]
+    public void ResolveEnumerable()
+    {
+        _configuration.RegisterSingleton<IService, Service1>();
+        _configuration.RegisterSingleton<IService, Service2>();
+        _configuration.RegisterSingleton<IService, Service3>();
+        _configuration.RegisterSingleton<IRepository, Repository1>();
+            
+        var container = _configuration.GenerateContainer();
+        List<object> services = container.GetService<IEnumerable<IService>>() as List<object>;
+            
+        Assert.AreEqual(3, services?.Count);
+        Assert.AreEqual(typeof(Service1), services[0].GetType());
+        Assert.AreEqual(typeof(Service2), services[1].GetType());
+        Assert.AreEqual(typeof(Service3), services[2].GetType());
+    }
     
     
 }
