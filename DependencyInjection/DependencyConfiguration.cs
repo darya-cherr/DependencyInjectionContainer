@@ -14,7 +14,7 @@ namespace DependencyInjection
         
         public DIContainer GenerateContainer()
         {
-            throw new System.NotImplementedException();
+            return new DIContainer(_servicesInfo);
         }
     }
 
