@@ -25,6 +25,23 @@ namespace DependencyInjection
              _servicesInfo[typeof(TService)].Add(new ServiceInfo(typeof(TService), typeof(TImplementation), ServiceLifetime.Transient));
          }
         
+         public void RegisterSingleton(Type service, Type implementation)
+         {
+             if (!_servicesInfo.ContainsKey(service))
+             { 
+                 _servicesInfo[service] = new List<ServiceInfo>();
+             }
+             _servicesInfo[service].Add(new ServiceInfo(service, implementation, ServiceLifetime.Singleton));
+         }
+        
+         public void RegisterTransient(Type service, Type implementation)
+         { 
+             if (!_servicesInfo.ContainsKey(service))
+             { 
+                 _servicesInfo[service] = new List<ServiceInfo>();
+             }
+             _servicesInfo[service].Add(new ServiceInfo(service, implementation, ServiceLifetime.Transient));
+         }
         
         public DIContainer GenerateContainer()
         {

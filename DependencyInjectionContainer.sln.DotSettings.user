@@ -5,4 +5,9 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::62C35F3D-2728-490A-87CF-250D50DC8789::net5.0::Tests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f2007fbc_002D9336_002D4374_002D8fd5_002D7529c5e255b0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ResolveCyclingDepencies" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::62C35F3D-2728-490A-87CF-250D50DC8789::net5.0::Tests.ResolveCyclingDepencies&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

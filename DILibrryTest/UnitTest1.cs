@@ -69,5 +69,35 @@ public class Tests
         Assert.AreEqual(typeof(Service3), services[2].GetType());
     }
     
+    [Test]
+    public void ResolveGenericDependency()
+    {
+        _configuration.RegisterSingleton<IRepository, Repository1>();
+        _configuration.RegisterSingleton<IService<IRepository>, Service4<IRepository>>();
+            
+        var container = _configuration.GenerateContainer();
+        object service = container.GetService<IService<IRepository>>();
+        
+        Assert.AreEqual(typeof(Service4<IRepository>), service.GetType());
+        Assert.NotNull((service as Service4<IRepository>)?.Repository);    
+    }
+    
+    [Test]
+    public void ResolveOpenGenericsDependency()
+    {
+        _configuration.RegisterSingleton<IRepository, Repository1>();
+        _configuration.RegisterSingleton(typeof(IService<>), typeof(Service4<>));
+            
+        var container = _configuration.GenerateContainer();
+        object service =  container.GetService<IService<IRepository>>();
+        
+        Assert.AreEqual(typeof(Service4<IRepository>), service.GetType());
+        Assert.NotNull((service as Service4<IRepository>)?.Repository);
+    }
+    
+    
+    
+    
+    
     
 }
