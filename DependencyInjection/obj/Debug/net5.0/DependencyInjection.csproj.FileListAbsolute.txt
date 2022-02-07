@@ -1,0 +1,12 @@
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\bin\Debug\net5.0\DependencyInjection.deps.json
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\bin\Debug\net5.0\DependencyInjection.dll
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\bin\Debug\net5.0\ref\DependencyInjection.dll
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\bin\Debug\net5.0\DependencyInjection.pdb
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\DependencyInjection.csprojAssemblyReference.cache
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\DependencyInjection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\DependencyInjection.AssemblyInfoInputs.cache
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\DependencyInjection.AssemblyInfo.cs
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\DependencyInjection.csproj.CoreCompileInputs.cache
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\DependencyInjection.dll
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\ref\DependencyInjection.dll
+C:\Users\Dasha_2\RiderProjects\DependencyInjectionContainer\DependencyInjection\obj\Debug\net5.0\DependencyInjection.pdb
