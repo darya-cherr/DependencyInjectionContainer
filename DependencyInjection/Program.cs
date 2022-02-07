@@ -9,7 +9,7 @@ namespace DependencyInjectionContainer
         {
             var configuration = new DependencyConfiguration();
             
-            configuration.RegisterSingleton<Type>();
+            configuration.RegisterSingleton<>();
             
             var container = configuration.GenerateContainer();
             

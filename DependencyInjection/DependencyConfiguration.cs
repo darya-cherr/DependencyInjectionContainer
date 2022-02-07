@@ -1,10 +1,14 @@
-﻿namespace DependencyInjection
+﻿using System.Collections.Generic;
+
+namespace DependencyInjection
 {
     public class DependencyConfiguration
     {
-        public void RegisterSingleton<T>()
+        private List<ServiceInfo> _servicesInfo = new List<ServiceInfo>();
+        
+        public void RegisterSingleton<TService, TImplementation>()
         {
-            
+            _servicesInfo.Add(new ServiceInfo(typeof(TService), typeof(TImplementation)));
         }
         
         
