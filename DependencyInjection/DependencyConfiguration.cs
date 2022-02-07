@@ -8,7 +8,10 @@
         }
         
         
-        
+        public DIContainer GenerateContainer()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 
 }

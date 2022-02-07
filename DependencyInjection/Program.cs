@@ -11,6 +11,9 @@ namespace DependencyInjectionContainer
             
             configuration.RegisterSingleton<Type>();
             
+            var container = configuration.GenerateContainer();
+            
+            var service = container.GetService<Type>();
         }
     }
 }
